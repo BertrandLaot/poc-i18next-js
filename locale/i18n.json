@@ -1,0 +1,24 @@
+{
+"en": {
+    "translation": {
+    "test": "hello world",
+    "test2": "hello world guys",
+    "test3": "hello world wouhouw !",
+    "testDeep": {
+        "inner": "Teddy yeah"
+    },
+    "day": "Today is {{date}}"
+    }
+},
+"fr": {
+    "translation": {
+    "test": "bonjour monde",
+    "test2": "bonjour monde amis",
+    "test3": "bonjour monde wouhouw !",
+    "testDeep": {
+        "inner": "Teddy wou"
+    },
+    "day": "Aujourd'hui est {{date}}"
+    }
+}
+}

@@ -15,7 +15,7 @@ const i18next = require('i18next');
 //   );
 // });
 
-module.exports.generateFilesLanguage = (templateJs) => {
+module.exports.generateFilesLanguage = (templateJs, jsonIntl, lang) => {
 
   let defaultQuotes = '\'';
   let quotes = '\'';
@@ -23,32 +23,9 @@ module.exports.generateFilesLanguage = (templateJs) => {
   let regex = /i18next\.t\(\'(.*)\'\)/gm;
 
   i18next.init({
-    lng: 'en',
+    lng: lang,
     debug: false,
-    resources: {
-      en: {
-        translation: {
-          "test": "hello world",
-          "test2": "hello world guys",
-          "test3": "hello world wouhouw !",
-          "testDeep": {
-            "inner": "Teddy yeah"
-          },
-          "day": "Today is {{date}}"
-        }
-      },
-      fr: {
-        translation: {
-          "test": "bonjour monde",
-          "test2": "bonjour monde amis",
-          "test3": "bonjour monde wouhouw !",
-          "testDeep": {
-            "inner": "Teddy wou"
-          },
-          "day": "Aujourd'hui est {{date}}"
-        }
-      }
-    }
+    resources: jsonIntl
   }, (err, t) => {
 
     if(err) throw err;
